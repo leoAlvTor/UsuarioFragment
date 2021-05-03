@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DatosFragment">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5px">
+
+            <TableRow android:layout_width="match_parent">
+                <TextView
+                    android:text="Nombre:"/>
+                <EditText
+                    android:id="@+id/txt_nombre" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+                <TextView
+                    android:text="Apellido:"/>
+                <EditText
+                    android:id="@+id/txt_apellido" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+                <TextView
+                    android:text="Ciudad Actual:"/>
+                <EditText
+                    android:id="@+id/txt_ciudad" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+                <Button
+                    android:id="@+id/btn_navigate"
+                    android:text="Enviar Datos!"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

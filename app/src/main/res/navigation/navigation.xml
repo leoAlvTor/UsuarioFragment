@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/datosFragment">
+
+    <fragment
+        android:id="@+id/datosFragment"
+        android:name="ec.edu.ups.usuariofragment.DatosFragment"
+        android:label="fragment_datos"
+        tools:layout="@layout/fragment_datos">
+        <action
+            android:id="@+id/action_datosFragment_to_fragmentSaludo"
+            app:destination="@id/fragmentSaludo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSaludo"
+        android:name="ec.edu.ups.usuariofragment.FragmentSaludo"
+        android:label="fragment_saludo"
+        tools:layout="@layout/fragment_saludo">
+        <action
+            android:id="@+id/action_fragmentSaludo_to_datosFragment"
+            app:destination="@id/datosFragment" />
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            android:defaultValue="John" />
+        <argument
+            android:name="apellido"
+            app:argType="string"
+            android:defaultValue="Smith" />
+        <argument
+            android:name="direccion"
+            app:argType="string"
+            android:defaultValue="Cuenca" />
+    </fragment>
+</navigation>
